@@ -25,17 +25,18 @@ const AboutSection = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
         <div className="hidden-item" style={{ transitionDelay: "200ms" }}>
           <p className="text-lg leading-relaxed text-resume-gray mb-6">
-            I'm a{" "}
+            I&apos;m a
             <span className="text-white font-medium">full-stack developer</span>{" "}
             with over 6 years of experience specializing in building exceptional
-            digital experiences. Currently, I'm focused on building accessible,
-            human-centered products at{" "}
+            digital experiences. Currently, I&apos;m focused on building
+            accessible, human-centered products at
             <span className="text-resume-orange">Tech Innovations</span>.
           </p>
           <p className="text-lg leading-relaxed text-resume-gray">
             My approach combines clean code principles with modern design
-            aesthetics. I'm passionate about creating software that solves real
-            problems while providing intuitive, delightful user experiences.
+            aesthetics. I&apos;m passionate about creating software that solves
+            real problems while providing intuitive, delightful user
+            experiences.
           </p>
         </div>
 

@@ -51,9 +51,9 @@ const Experience = () => {
         className="section-subtitle hidden-item"
         style={{ transitionDelay: "200ms" }}
       >
-        I've worked across various domains in web development, from startups to
-        established companies, focusing on building scalable and performant
-        applications.
+        I&apos;ve worked across various domains in web development, from
+        startups to established companies, focusing on building scalable and
+        performant applications.
       </p>
 
       <div className="mt-16">

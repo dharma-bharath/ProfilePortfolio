@@ -43,7 +43,7 @@ export const ContactSetcion = () => {
         className="section-subtitle hidden-item"
         style={{ transitionDelay: "200ms" }}
       >
-        Feel free to reach out if you're looking for a developer, have a
+        Feel free to reach out if you&apos;re looking for a developer, have a
         question, or just want to connect.
       </p>
 

@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 
 const Profile = () => {
@@ -85,9 +86,11 @@ const Profile = () => {
           <div className="relative">
             <div className="w-52 h-52 md:w-72 md:h-72 rounded-full overflow-hidden relative">
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-resume-orange/20 to-orange-500/20 animate-rotate-slow opacity-70"></div>
-              <img
-                src="Dharma.jpg"
+              <Image
+                src="/Dharma.jpg" // Ensure Dharma.jpg is inside the public/ folder
                 alt="Profile"
+                width={200} // Set the desired width
+                height={200} // Set the desired height
                 className="w-full h-full object-cover relative z-10"
               />
             </div>

@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import { GithubIcon, ExternalLink } from "lucide-react";
 import useScrollAnimation from "../hooks/useScrollAnimation";
+import Image from "next/image";
 
 interface ProjectItem {
   title: string;
@@ -61,8 +62,8 @@ const Projects = () => {
         className="section-subtitle hidden-item"
         style={{ transitionDelay: "200ms" }}
       >
-        Here's a selection of projects I've worked on. Each demonstrates
-        different skills and technologies.
+        Here&apos;s a selection of projects I&apos;ve worked on. Each
+        demonstrates different skills and technologies.
       </p>
 
       <div
@@ -76,10 +77,13 @@ const Projects = () => {
             style={{ transitionDelay: `${300 + index * 100}ms` }}
           >
             <div className="relative h-48 overflow-hidden">
-              <img
+              <Image
                 src={project.image}
                 alt={project.title}
+                width={500} // Adjust width as needed
+                height={300} // Adjust height as needed
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                layout="responsive" // Ensures the image is responsive
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute bottom-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
