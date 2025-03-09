@@ -6,6 +6,7 @@ const nextConfig = {
   },
   experimental: {
     optimizeCss: true, // Prevents CSS processing issues
+    outputFileTracing: false,
   },
 };
 
