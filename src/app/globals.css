@@ -1,0 +1,261 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-resume-black text-white antialiased overflow-x-hidden;
+    font-family: 'Inter', sans-serif;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer utilities {
+  @keyframes skill-progress {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 py-20 md:py-28 lg:py-32;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-8 md:mb-12;
+  }
+
+  .section-subtitle {
+    @apply text-base md:text-lg text-resume-gray mb-12 md:mb-16 max-w-2xl;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .orange-glow {
+    text-shadow: 0 0 20px rgba(255, 126, 57, 0.7);
+  }
+
+  .orange-gradient {
+    background: linear-gradient(135deg, #FF7E39 0%, #FF5733 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .glass {
+    @apply backdrop-blur-lg bg-white/5 border border-white/10;
+  }
+
+  .timeline-item {
+    @apply relative pl-8 pb-8 border-l border-resume-orange/30 last:border-0 last:pb-0;
+  }
+
+  .timeline-dot {
+    @apply absolute -left-[5px] top-1 w-[10px] h-[10px] rounded-full bg-resume-orange;
+  }
+
+  .hidden-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .show-item {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .anim-slide-up {
+    animation: slideUp 0.8s ease forwards;
+  }
+
+  .anim-slide-right {
+    animation: slideRight 0.8s ease forwards;
+  }
+
+  .anim-slide-left {
+    animation: slideLeft 0.8s ease forwards;
+  }
+
+  /* Bubble animations */
+  .bubble {
+    @apply absolute rounded-full mix-blend-screen filter blur-xl opacity-70 animate-float;
+    background: radial-gradient(circle, rgba(255, 126, 57, 0.8) 0%, rgba(255, 87, 51, 0.4) 70%);
+  }
+
+  .bubble-1 {
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 8s;
+  }
+
+  .bubble-2 {
+    width: 150px;
+    height: 150px;
+    top: 60%;
+    left: 20%;
+    animation-delay: 1s;
+    animation-duration: 10s;
+  }
+
+  .bubble-3 {
+    width: 80px;
+    height: 80px;
+    top: 40%;
+    right: 15%;
+    animation-delay: 2s;
+    animation-duration: 7s;
+  }
+
+  .bubble-4 {
+    width: 120px;
+    height: 120px;
+    bottom: 30%;
+    right: 25%;
+    animation-delay: 3s;
+    animation-duration: 9s;
+  }
+
+  .bubble-5 {
+    width: 70px;
+    height: 70px;
+    bottom: 20%;
+    left: 30%;
+    animation-delay: 4s;
+    animation-duration: 11s;
+  }
+
+  @keyframes slideUp {
+    0% {
+      transform: translateY(20px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideRight {
+    0% {
+      transform: translateX(-20px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideLeft {
+    0% {
+      transform: translateX(20px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
