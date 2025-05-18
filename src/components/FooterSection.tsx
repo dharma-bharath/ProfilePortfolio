@@ -24,7 +24,7 @@ export const FooterSection = () => {
   );
   return (
     <div className="max-w-6xl mx-auto px-6">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Column 1: About */}
         <div>
           <h3 className="text-xl font-semibold mb-4 text-white">
@@ -126,7 +126,7 @@ export const FooterSection = () => {
         </div>
 
         {/* Column 3: Feature Request */}
-        <div>
+        {/* <div>
           <div className="flex items-center gap-2 mb-4">
             <h3 className="text-xl font-semibold text-white">
               Request a Feature
@@ -145,7 +145,7 @@ export const FooterSection = () => {
             <MessagesSquare size={16} />
             <span>Send Suggestion</span>
           </a>
-        </div>
+        </div> */}
       </div>
 
       <div className="mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
