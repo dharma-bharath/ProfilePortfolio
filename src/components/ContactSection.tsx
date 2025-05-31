@@ -65,7 +65,7 @@ export const ContactSetcion = () => {
                     href="https://mail.google.com/mail/?view=cm&fs=1&to=dharmabharath82@gmail.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center text-resume-gray hover:text-resume-orange transition-colors"
+                    className="flex items-center text-resume-gray hover:text-resume-orange transition-colors break-all"
                   >
                     dharmabharath82@gmail.com
                     <ExternalLink size={14} className="ml-1" />
